@@ -11,3 +11,7 @@ def min_sth(a, b):
 
 def print_hell0():
     print('hello')
+
+c = 8
+q = 9
+print(c+q)
