@@ -3,3 +3,4 @@ if __name__ == '__main__':
 else:
     raise SystemExit('this is not a library!')
 
+a = [x for x in range(10)]
