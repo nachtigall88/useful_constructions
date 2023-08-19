@@ -4,3 +4,4 @@ else:
     raise SystemExit('this is not a library!')
 
 a = [x for x in range(10)]
+b = [y for y in range(15)]
