@@ -15,3 +15,15 @@ with sq.connect('word_data.db') as con:
       cur.execute(f"""INSERT INTO words VALUES (
       '{data.art}', '{data.word}', '{data.translation}'
       )""")
+
+def check_if_exists(data):
+  """метод перевіряє, чи є слово, що додається, в базі"""
+  flag = True
+  with sq.connect('word_data.db') as con:
+      cur = con.cursor()
+      cur.execute("""SELECT * FROM words""")
+      result = cur.fetchall()
+      for i in result:
+          if data in i:
+              flag = False
+  return flag
