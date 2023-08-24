@@ -19,11 +19,19 @@ with sq.connect('word_data.db') as con:
 def check_if_exists(data):
   """метод перевіряє, чи є слово, що додається, в базі"""
   flag = True
-  with sq.connect('word_data.db') as con:
+  with sq.connect('database.db') as con:
       cur = con.cursor()
-      cur.execute("""SELECT * FROM words""")
+      cur.execute("""SELECT * FROM table""")
       result = cur.fetchall()
       for i in result:
           if data in i:
               flag = False
   return flag
+
+
+
+
+
+
+
+
