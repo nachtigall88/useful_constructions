@@ -7,6 +7,11 @@ with sq.connect('word_data.db') as con:
       art TEXT,
       word TEXT,
       translation TEXT
-)""")
+      )""")
 
 """код для додавання даних у базу"""
+with sq.connect('word_data.db') as con:
+      cur = con.cursor()
+      cur.execute(f"""INSERT INTO words VALUES (
+      '{data.art}', '{data.word}', '{data.translation}'
+      )""")
