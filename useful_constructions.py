@@ -35,6 +35,7 @@ class Point:
     #         self.y = a*cos(b)
     #         self.x = a*sin(b)
 
+
     @staticmethod
     def new_cartesian_point(x, y):
         return Point(x, y)
